@@ -1,0 +1,561 @@
+                      (          (        )   (     
+            (         )\ )   (   )\ )  ( /(   )\ )  
+            )\   (   (()/( ( )\ (()/(  )\()) (()/(  
+          (((_)  )\   /(_)))((_) /(_))((_)\   /(_)) 
+          )\___ ((_) (_)) ((_)_ (_))    ((_) (_))   
+         ((/ __|| __|| _ \ | _ )|_ _|  / _ \ / __|  
+          | (__ | _| |   / | _ \ | |  | (_) |\__ \  
+           \___||___||_|_\ |___/|___|  \___/ |___/
+     
+      
+
+******************************************************************************
+*                                                                            *
+*            .:Release V2.4.2 Beta (Xbox V1.0 - 1.6) Only:.                  *
+*                                                                            *
+******************************************************************************
+                                                                              
+******************************************************************************
+*   Version :.........V2.4.2 Beta      * Size :......................256 KB  *
+*   Date :....................18/08/24 * Type :...............Xbox Bios      *
+*   Group :........Team CerBios        * Platform :.........Microsoft Xbox   *
+******************************************************************************
+*                          https://discord.gg/VcdSfajQGK                     *
+******************************************************************************
+                                                                              
+******************************************************************************
+*....:Changes/Additions:.....................................................*
+******************************************************************************
+*                                                                            *
+*           --A new custom Bios for the Original Xbox.--                     *
+*                                                                            *
+*    Release: V2.4.2 Beta                                                    *
+*                                                                            *
+*    The Dogs Are Back From Their Vacation (Fixed Splash Screen)             *
+*    Improved Dual HDD Support. (DriveSetup = 3)                             *
+*    Updated UDMA Settings In INI To Support Both HDDS. Please Ensure You    *
+*       are Running Latest Cerbios.INI                                       *
+*                                                                            *
+*       New UDMA Settings:                                                   *
+*       ; Set Master Drive UDMA mode 0-6 on cold-boot                        *
+*       UdmaModeMaster = 2                                                   *
+*                                                                            *
+*       ; Set Slave Drive UDMA mode 0-6 on cold-boot (Enable DriveSetup = 3) *
+*       UdmaModeSlave  = 2                                                   *
+*                                                                            *
+*    Released Updated Version Of LithiumX Which Allows Browsing Of 2nd HDD   *
+*    Additional System Stability Improvements.                               *
+*                                                                            *
+*.........................:Dual HDD Support Info?:...........................*
+*    This Is A First For The Original Xbox And You May Encounter Some Bugs.  *
+*    Please Report Your Test Results In Our Discord Room For Future          *
+*    Improvements.                                                           *
+*                                                                            *
+*    To Custom Format Your 2nd HDD You Will Require FATXplorer 3.0 beta 32   *
+*    or Higher. This Can Be Downloaded From The Below Link.                  *
+*    https://fatxplorer.eaton-works.com/3-0-beta/                            *
+*                                                                            *
+*    Existing Partitions Are Supported With Dual HDD Configuration.          *
+*    This Includes Stock HDD or Cerbios Formated Extended HDDS               *
+*                                                                            *
+*......................:Dashboard & Software Updates:........................*
+*    Existing Open Source Dashboards Will Need To Be Updated To Support      *
+*    Secondary HDD "\Device\Harddisk1\Partition(#)\"                         *
+*                                                                            *
+*    Software Where Source Does Not Exist May Need To Be Patched Manually.   *
+*    Please Share Any Patches Made With The Community.                       *
+*                                                                            *
+*                                                                            *
+*    #Please Contribute To Our Testing Efforts And Report Your Test Results, *
+*    Bugs, Or Any Other Feedback In Our Room On Discord. Your Input Is       *
+*    Invaluable And Greatly Appreciated.                                     *
+*                                                                            *
+*    We Are Already Hard At Work Towards Our Next Major Release.             *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*    Release: V2.4.1 Beta                                                    *
+*                                                                            *
+*    Fixed Reported Issues With Force 480p & Force Pal                       *
+*    Fixed Reported Video Issues, Black Screen On Some Games                 *
+*    Improved VGA Mode. Still Experimental                                   *
+*    Additional System Stability Improvements.                               *
+*                                                                            *
+*    #Please Contribute To Our Testing Efforts And Report Your Test Results, *
+*    Bugs, Or Any Other Feedback In Our Room On Discord. Your Input Is       *
+*    Invaluable And Greatly Appreciated.                                     *
+*                                                                            *
+*    We Are Already Hard At Work Towards Our Next Major Release.             *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*                                                                            *
+*    Release: V2.4.0 Beta                                                    *
+*                                                                            *
+*    NEW INI CONFIGURATION OPTIONS PLEASE UPDATE YOUR CERBIOS.INI FILE       *
+*                                                                            *
+*    Fixed Booting / Freezing  Issues with Some V1.0 Consoles                *
+*    Fixed Video Issues Related To V1.6 Xcalibur Encoder. Composite, Scart   *
+*       Svideo & Component Video Modes Now Working.                          *
+*    Fixed Video Issues Related to Scrambled Image On 1.6 Consoles. No More  *
+*       Patching Of XBEs Required.                                           *
+*    Added Ability To Set UDMA Mode Via Cerbios.ini                          *
+*    Added Ability To Force 480I to 480P Via Cerbios.ini & Cerbios Tool.     *
+*    Added IGPC (In Game Power Cycle), Set Your Own Mapping Via Cerbios Tool *
+*       # Power Cycle = LT+RT+BLACK+DPADUP                                   *
+*    Improved Bootup Times When No DVD / HDD Connected.                      *
+*    Fixed Issues with 1.6 Consoles & Fan Speed.                             *
+*    Added Default Fan Speed For CPU Upgraded Consoles To 60%.               *
+*    Improved Safemode Detection.                                            *
+*    Added Support For Force-PAL, an Automatic Setting That Temporarily      *
+*        Switches The Console Region To PAL For Certain PAL-Only Games.      *
+*    Added Support For An Upcoming RTC Hardware Module To Maintain Time Sync *
+*         Configurable Via Cerbios.ini (RTCEnable)                           *
+*    Added Experimental VGA Support.                                         *
+*         Requires Cable That Can Seperate Sync-on-Green Signal Or A Monitor *
+*         That Supports Sync-on-Green. Video Mode Pins Set As (1+3) Or For   *
+*         HDTV (2+3), This only Supports Xbox V1.0-1.4 Only.                 *
+*         Configurable Via Cerbios.ini (ForceVGA)                            *                            
+*    Added Ability To Block Xbox Dashboard Updates Via Cerbios.ini           *
+*         This Only Blocks Checks Against C:\xboxdash.xbe. Useful When       *
+*         Running Font Based Softmods Which Break If Dash Is Updated.        *
+*    Additional System Stability Improvements.                               *
+*                                                                            *
+*                                                                            *
+*    An Updated Version Of Team Resurgents Cerbios Tool Will Be Found At     *
+*    https://github.com/Team-Resurgent/CerbiosTool                           *
+*                                                                            *
+*    #Please Contribute To Our Testing Efforts And Report Your Test Results, *
+*    Bugs, Or Any Other Feedback In Our Room On Discord. Your Input Is       *
+*    Invaluable And Greatly Appreciated.                                     *
+*                                                                            *
+*    We Are Already Hard At Work Towards Our Next Major Release.             *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*                                                                            *
+*    Release: V2.3.2 HD Alpha Test Build / Bug Finder                        *
+*                                                                            *
+*    Added Inital Support for HD+ Hardware Mod                               *
+*    Released ElpisHD App. Ability To Control HD+ Features On Cerbios.	     *
+*      Place ElpisHD Folder To Root Of C:\ For Default Location and Run      *
+*      Default.Xbe To Configure Settings.                                    *
+*                                                                            *
+*.........................:Why Is This An Alpha?:............................*
+*                                                                            *
+*    This Release Is A Public Alpha Test Build Of Cerbios, Featuring Support *
+*    For The HD+ Mod. We Issue This Release With An Important Warning: This  *
+*    Build Is Not Intended For Regular, Daily Use. It Is Likely To Contain   *
+*    Bugs, Including Some That May Have Been Overlooked Or Inadvertently     *
+*    Introduced During The Integration Of Undocumented Support For Third-    *
+*    Party Hardware.                                                         *
+*                                                                            *
+*    We Are Relying On The Community's Collaboration For This Phase. Your    *
+*    Participation In Testing And Providing Feedback Is Vital. We Need Your  *
+*    Help To Identify And Report Any Issues Before We Proceed To An Official *
+*    Beta Release. This Collaborative Effort Is Crucial To Ensure The        *
+*    Stability And Functionality Of The Final Product.                       *
+*                                                                            *
+*    ElpisHD App is required to change settings on the HD+ And Works Only    *
+*    With Cerbios. Source Code Will Be Released Once Testing Is Complete     *
+*    And Offical Beta Version With HD Support Is Released.                   *
+*                                                                            *
+*    #Please Contribute To Our Testing Efforts And Report Your Test Results, *
+*    Bugs, Or Any Other Feedback In Our Room On Discord. Your Input Is       *
+*    Invaluable And Greatly Appreciated.                                     *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*    Release: V2.3.1 Beta                                                    *
+*                                                                            *
+*    Added Ability To Launch Cerbios As A BFM Bios Via PBL Methods.          *
+*                                                                            *
+*..............................:What Is BFM?:................................*
+*                                                                            *
+*    Thanks To Team Resurgent For Providing The Required Patches, Cerbios    *
+*    Is Now BFM Compatible. This Means Your Favourite Bios Can Now Be Used   *
+*    On Softmodded Consoles, TSOP And All Modchips.                          *
+*                                                                            *
+*    To Launch Cerbios As A BFM Bios, Simply Copy The Pheonix Bios Loader    *
+*    Folder To Your HDD A Long With A Copy Of Cerbios Bios File Renamed As   *
+*    Cerbios.bin , Copy BootAnims Folder & Cerbios.ini to Root Of C:         *
+*    Launch Default.XBE & Let The Magic Happen. Console Should Reboot Into   *
+*    Cerbios.                                                                *
+*    Please Note Doing A FULL IGR While Using PBL Will Reload Your Default   *
+*    Bios Again.                                                             *
+*                                                                            *
+*    For Modchip & TSOP Users Nothing Has Changed. Simply Flash To Your      *
+*    Hardware, Copy BootAnims Folder & Cerbios.ini to Root Of C:             *
+*                                                                            *
+*    The Updated Version Of Team Resurgents Cerbios Tool Can Be Found At     *
+*    https://github.com/Team-Resurgent/CerbiosTool                           *
+*    Please Show Them Some Love, As They Continue To Release Some Amazing    *
+*    Free Tools For The Scene. They Have Set Up A Patreon & Kofi             *
+*                                                                            *
+*    Thanks Also Go Out To Team Pheonix & Meetoo For Their Amazing Work      *
+*    They Did With PBL. 20 Years Later & Still Works As It Did On Day One    *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS IN OUR ROOM ON     *
+*    DISCORD THANKS                                                          *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*    Release: V2.3.0 Beta                                                    *
+*                                                                            *
+*    Added New Way To Customize Bios Using Cerbios Tool (windows Only ATM)   *
+*    Added Ability To Theme Cerbios Logo Via Cerbios Tool                    *
+*    Added Ability To Scale or Hide Cerbios Logo Entirely Via Cerbios Tool   *
+*    Added Experimental UDMA Mode 6 (Requires Ultra DMA (80-Conductor)       *
+*    IDE/ATA Cable & Startech Adapter.                                       *
+*    Removed Custom IGR Keys From INI. Now Configureable Via Cerbios Tool    *
+*    Added Ability To Use Drive Letters In Paths As Well As \Device* Format  *
+*    Added Ability To Set UDMA Modes 2-6 Via Cerbios Tool                    *
+*    Added Ability To Set UDMA Mode Auto Via Cerbios Tool For Startech or    *
+*       Generic Sata to IDE Adapters. Auto Mode Will Detect Supported        *
+*       UDMA Mode Of Drive & Sets that. This Feature Is Experimental, You    *
+*       Can Boot Into UDMA Mode 2 (Safe Mode) by Booting Xbox Using Eject.   *
+*       Please Share Your Results Of Auto Mode In Our Room On Discord.       *
+*    Added Auto Boot Into Safe Mode If Error 9 Or 13 Detected Due To         *
+*    Incompatble UDMA Mode.                                                  *
+*    Updated Cerbios.ini to Support Drive Letter Path Names As well.         *
+*    System Stability Improvements                                           *
+*                                                                            *
+*   We Are Working On Fixing Some Of The Reported 1.6 Video Issues With      *
+*   Composite Video Cables. We Recommend You Use Component Or HDMI Plug      *
+*   And Play Solutions Such As Chimeric HDMI, XBOX2HDMI Or Xedusa.           *
+*                                                                            *
+*    We Are Already Hard At Work Towards Our Next Major Release.             *
+*                                                                            *
+*.........................:What Is Cerbios Tool?:............................*
+*                                                                            *
+*    Cerbios Tool Allows You To Customize Some Of the Features Found In      *
+*    Cerbios. This Tool Was Created And Released By Team Resurgent.          *
+*    More Information And Features can Be Found On Their Github Page.        *
+*                                                                            *
+*    Some Of Its Core Features & Functionality Are Listed Below .            *
+*    Ability To Theme Cerbios Logo.                                          *
+*    Comes Preloaded With Themes To Pick From                                *
+*    Ability To Copy & Share Themes With Your Friends.                       *
+*    Ability To Add & Load Themes into App Using Themes.JSON.                *
+*    Ability To Scale or Hide Cerbios Logo Apart From Safe Mode Notice       *
+*    Ability To Set UDMA MODES AUTO or 2-6                                   *
+*    Ability To Save Favourite Configs To Re-Use Later                       *
+*    Ability To Set Config Defaults                                          *
+*    Ability To Set IGR Combo Keys & Controller Port                         *
+*    Ability To Set Or Edit Existing Functionality Such as Debug, Fan Speed  *
+*    DriveSetup, AV Check, CD, Dash & Boot Animation Paths And Front LED     *
+*    Directly Into Bios.                                                     *
+*    Ability To Disable Config Loading From HDD And Use Settings Saved In    *
+*    In Bios Instead. Config Loading From HDD Is Enabled By Default And Will *
+*    Overwrite Any Settings In Bios With That In INI File.                   *
+*    Many More Features Please Check Github For Updates.                     *
+*                                                                            *
+*    The Latest Version Of Team Resurgents Cerbios Tool Can Be Found At      *
+*    https://github.com/Team-Resurgent/CerbiosTool                           *
+*    Please Show Them Some Love, As They Continue To Release Some Amazing    *
+*    Free Tools For The Scene.                                               *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS IN OUR ROOM ON     *
+*    DISCORD THANKS                                                          *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*    Release: V2.2.1 Beta                                                    *
+*                                                                            *
+*    Fixed Issue Where Some Split Isos Would Not Work Properly               *
+*        Shout-Out To Those That Reported This Bug To Us.                    *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS IN OUR ROOM ON     *
+*    DISCORD THANKS                                                          *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*    Release: V2.2.0 Beta - MERRY XMAS AND HAPPY NEW YEAR -                  *
+*                                                                            *
+*    Added Support for .CCI, Cerbios Compressed Image (Compressed Games)     *
+*    System Stability Improvements                                           *
+*    Added UDMA4 Build. For Those Who Requested It                           *
+*                                                                            *
+*                                                                            *
+*................:What Is CCI, Cerbios Compressed Image?:....................*
+*                                                                            *
+*    .CCI Is A Compression Method For The ISO Image Format. It Is Used To    *
+*    Compress Your Dumped Xbox Games As An Alternative To The .CSO           *
+*    Compression Method. CCI Was Designed With Fast Creation Of The File     *
+*    Format And Optimal Decompression In Kernel Without The Need For Any     *
+*    Additional Hardware, Modifications Or Addons.                           *
+*                                                                            *
+*    .CCI Is The First Compression Method For ISO That Has Support For       *
+*    Split Compressed ISO's To Work On An Xbox. It Was Created So That       *
+*    Additional Storage Space Can Be Saved, Whilst Also Using A Low Memory   *
+*    Footprint. Other Benefits Include Being Able To Be Decompressed With    *
+*    Minimal Code As Well As Fast LZ4 Decompression That Does Not Impact     *
+*    System Performance And Future Expandability. Team Resurgent Created     *
+*    The First Prototype Code That We Have Iterated Upon And Incorporated    *
+*    Into Cerbios Today.                                                     *
+*                                                                            *
+*    Team Resurgent Has Updated Their Repackinator Tool & Have Added The     *
+*    Ability For Users To Create Compressed Images (.CCI) Of Your Dumps      *
+*                                                                            *
+*    The Latest Version Of Team Resurgents Repackinator Can Be Found At      *
+*    https://github.com/Team-Resurgent/Repackinator                          *
+*    Please Show Them Some Love, As They Continue To Release Some Amazing    *
+*    Free Tools For The Scene.                                               *
+*                                                                            *
+*    All Image Formats Created By Repackinator Keep Sectors & Disk Info      *
+*    Intact To Ensure DRM Problamatic Games Such As Toca 3 Etc Work.         *
+*                                                                            *
+*    To All Our Beta Testers, Thank You For All The Testing And Support      *
+*    Much Love & Respect <3.                                                 *
+*                                                                            *
+*    We Will Be Back In 2023 With New Amazing Releases For All To Enjoy.     *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS IN OUR ROOM ON     *
+*    DISCORD, INCLUDING ANY ISSUES FACED WITH CCI THANKS                     *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*    Release: V2.1.0 Beta                                                    *
+*                                                                            *
+*    Added Support for Xbox Console Revision V1.6                            *
+*    Fixed Issues With Insignia Account Creation (MACS)                      *
+*       Will No Longer Report As Live Blocking Bios.                         *
+*    System Stability Improvements                                           *
+*                                                                            *
+*                                                                            *
+*    People Doubted That It Would Be Possible However We Are Proud To        *
+*    Introduce Cerbios Hybrid V2.1.0, Compatible With All Xbox Revisions     *
+*    V1.0 - V1.6 Including all 128MB Ram Upgraded Systems                    *
+*                                                                            *
+*    For the Best Compatibility With Larger HDDS, We Recommend You Format    *
+*    Your HDD Using FATXPLORER 3.X Beta & The Cerbios Option. We Have Seen   *
+*    Issues When Drives Are Formatted for Titan Use.                         *
+*                                                                            *
+*    A Big Shout-Out To All The Talented People Whom Contributed To This     *
+*    Release, Endless Hours Were Spent Writing Custom Tools, Disassembly &   *
+*    Analysing Hundreds of Lines of ASM, To Recreate The Code We Use Today   *
+*    You Know Who You Are. To All Our Beta Testers, Thank You For All The    *
+*    Testing And Support, Much Love & Respect <3.                            *
+*                                                                            *
+*    We Are Already Hard At Work Towards Our Next Major Release.             *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS IN OUR ROOM ON     *
+*    DISCORD THANKS                                                          *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*    Release: V2.03 Repack                                                   *
+*                                                                            *
+*    Contains All Features And Fixes From V2.03                              *
+*    Fixed Booting Issue When DriveSetup = 0                                 *
+*    Updated Safemode Boot Screen                                            *
+*    System Stability Improvements                                           *
+*                                                                            *
+*                                                                            *
+*                                                                            *
+*    Apologies For Our Last Release, Our Devs Were A Little Too Eager To     *
+*    Get Back Into The Grind Of Things.                                      *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS IN OUR ROOM ON     *
+*    DISCORD THANKS                                                          *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*                                                                            *
+*    Release: V2.03                                                          *
+*                                                                            *
+*    AIO Hybrid Build No More Retail / Debug                                 *
+*    The Dogs Are Back From Their Vacation (Now Show On Boot)                *
+*    Fixed Random Screen Corruption On Cerbios Boot Logo                     *
+*    Fixed Error 12 When DriveSetup = 0 In Config and using UDMA5            *
+*    Fixed Issue With Some Games Not Booting (WIP)                           *
+*    Added Parental Control Removal. If Parental Controls Are Enabled        *
+*       Cerbios Will Now Remove / Unlock Them From EEPROM.                   *
+*    Added New Safemode, Press Eject To Bypass UDMA Settings, This Will      *
+*       Revert UDMA5 Back To UDMA2 (For That Boot). This Does Not Work       *
+*       With The Xenium Based Mod Chips.                                     *
+*                                                                            *
+*                                                                            *
+*                                                                            *
+*    We Are Still Here!!! Life Sometimes Takes Over Your Free Time.          *
+*    Additional Features & Hardware Support Is Still Worked On & Will Be     *
+*    Released Once Ready. Stay Tuned.                                        *
+*                                                                            *
+*    For the Best Compatibility With Your Games, We Recommend You Make       *
+*    Or Use Full Redump Images, Check Out The Newly Released Repackinator    *
+*    by Team Resurgent. This Tool Will Convert Your Redumps Into Split       *
+*    Images With Default.Xbe. Simply Copy To Your Xbox & Game On             *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS IN OUR ROOM ON     *
+*    DISCORD THANKS                                                          *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*                                                                            *
+*    Release: V2.02 Repack                                                   *
+*                                                                            *
+*    Fixed Issue With XMV Player Not Playing Video On Startup                *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS ON DISCORD         *
+*    OR THE FORUMS. THANKS                                                   *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*                                                                            *
+*    Release: V2.02                                                          *
+*                                                                            *
+*    Bios No Longer In Beta Phase                                            *
+*    Fixed Issue With Sonic Mega Collection Not Booting                      *
+*    Included Nyan Cat Boot Animation from T.H.D                             *
+*    Added New Boot Animation (XMV Player) Convert Your Animations To        *
+*       XMV Movie Files. Included Xbox One Boot Screen As Demo.              *
+*    Fixed OG Xbox Boot Animation. Now Supports Widescreen & Upto 720P       *
+*    Two Addition Bios Binaries Released. Retail UDMA5 & Debug UDMA5         *
+*       Use At Own Risk, A few IDE To Sata Adapters Do Not Support Higher    *
+*       Transfer Speeds, This Is Experimental. DO NOT FLASH UNLESS YOU       *
+*       YOU HAVE A WAY TO RECOVER, YOU HAVE BEEN WARNED!!!!                  *
+*                                                                            *
+*    We Are Working Hard In The Background To Add Additional Features        *
+*    And Hardware Support. Keep An Eye Out For Further Announcements         *
+*                                                                            *
+*    For the Best Compatibility With Your Games, We Recommend You Make       *
+*    Or Use Full Redump Images, Use DD To Remove Video Partition             *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS ON DISCORD         *
+*    OR THE FORUMS. THANKS                                                   *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*                                                                            *
+*    Release: Beta V2.01                                                     *
+*                                                                            *
+*    Bug Fixes Related To No DVD Drive Checks                                *
+*       All DriveSetup Modes In Config Now Work.                             *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS ON DISCORD         *
+*    OR THE FORUMS. THANKS                                                   *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*                                                                            *
+*    Release: Beta V2.00                                                     *
+*                                                                            *
+*    Two Bios Binaries Released. Retail & Hybrid Debug                       *
+*       Use Retail Unless You Require Debug Features For XDK Tools ETC       *
+*       #PLEASE NOTE: Current ATTACH.XBE DOES NOT WORK FOR ISO LOADING       *
+*       USING DEBUG BIOS. NEW ATTACH.XBE WILL BE RELEASED IN FUTURE          *
+*    Xbox V1.4 (Focus) Support Enabled                                       *
+*    Improved No DVD Drive Check With Two New Modes                          *
+*       # 1 = HDD & No DVD (Legacy Mode) Same as Existing Bioses             *
+*       # 2 = HDD & No DVD (Modern Mode) Complete Removal Of DVD Code        *
+*    Fixed 16 Invalid Clock Error. Xbox With Invalid Date/Time               *
+*       Will Now Boot And Default Will Be Set To 01/01/2022 12:00AM          *
+*    Fixed 07 HDD Time-Out Error when using cheap Ali Express Sata           *
+*       Adapters. (Boot Times May Take Longer With Cheaper Adapters)         *
+*    Added Dual HDD Support (Another Scene First By Team CerBios)            *
+*       New Tools Will Be Released To Take Advantage Of Dual HDD             *
+*    Added Single & Multiple Extended Partition Support & Cluster Sizes      *
+*       Expand Partitions past 998GB Limit                                   *
+*    Added Debug Enabled Bios With Option To Enable/Disable Via Config       *
+*    Added Customizable IGR , Set Your Own Button Mappings Via Config        *
+*    Added IGS (In Game Shutdown), Set Your Own Button Mappings Via Config   *
+*       # Shutdown = LT+RT+BACK+DPADUP                                       *
+*    Added Custom Fan Speed Control, Can Be Set Via Config                   *
+*    External Boot Animations, Easy To Replace Boot Animation XBE            *
+*       Path can be set Via Cerbios.ini Config.                              *
+*    Included Two Boot Animation XBE's. XBOX OG & Custom (Modern) With       *
+*       Bootanim.ini To Allow For Custom Colors ETC.                         *
+*       Place BootAnims Folder In Root Of C: For Default Location            *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS ON DISCORD         *
+*    OR THE FORUMS. THANKS                                                   *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*                                                                            *
+*    Release: Alpha V1.02                                                    *
+*    Enabled 3 different IGR Modes                                           *
+*     # Dash = LT+RT+Back+Start                                              *
+*     # Game = LT+RT+Black+Start                                             *
+*     # Full = LT+RT+Black+Back                                              *
+*    Bug Fixes Related To ISO Image Dismount                                 *
+*                                                                            *
+*    #PLEASE REPORT YOUR TEST RESULTS OR ANY BUGS REPORTS ON DISCORD         *
+*    OR THE FORUMS. THANKS                                                   *
+*                                                                            *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*                                                                            *
+*    Release: Alpha V1.01                                                    *
+*    Bug Fixes Related To Partition Table & Locked/Unlocked Drives           *
+*                                                                            *
+*    -------------------------------------------------------------------     *
+*    Release: Alpha V1                                                       *
+*    Custom LBA V4 Support. HDD up to 8TB  #READ WARNING#                    *
+*    Custom Partition Hack (Auto Detects!)                                   *
+*    Native XISO Support. Just run attach.xbe to load game..                 *
+*    Custom Error Messages With Full Explanation                             *
+*    Full 128MB Ram Support (MTRR Fix)                                       *
+*    Custom Config File For Animation Colors, Dash Paths CD Paths.           *
+*    Universal Region Fix. (GTA SA NTSC Will Now Boot On Pal Consoles)       *
+*    Boots All Originals                                                     *
+*    Boots All Unsigned Code                                                 *
+*    Boots All Backups                                                       *
+*    Boots Debug XBE's                                                       *
+*    Macrovision Protection Disabled                                         *
+*    No Patch Hack                                                           *
+*    No Reset On Eject                                                       *
+*    No DVD Rom Check                                                        *
+*    No AV Cable Check                                                       *
+*    Front Led Support                                                       *
+*                                                                            *
+*    #WARNING PLEASE USE AT OWN RISK. AS AN ALPHA TESTER THERE IS A          *
+*    POSSIBILITY THAT SOMETHING MIGHT GO WRONG. DONT BLAME US. YOU           *
+*    HAVE BEEN WARNED                                                        *
+*                                                                            *
+******************************************************************************
+                                                                              
+******************************************************************************
+*....:Frequently Asked Questions:............................................*
+******************************************************************************
+*                                                                            *
+*    Q: How do i format my HDD for extra partition support?                  *
+*    A: We have reached out to scene members with details. Their tools       *
+*    will be updated to make this process easier for you. We will also       *
+*    release a Xbox app that you can run on your xbox.                       *
+*                                                                            *
+*    Q: When will there be 1.4 - 1.6 support?                                *
+*    A: We currently have support for those hardware revisions disabled      *
+*    during this alpha stage of testing. Once we are happy with the          *
+*    testing and feedback received from the community we will introduce      *
+*    new features & hardware support.                                        *
+*    UPDATE: Xbox V1.4 SUPPORT ENABLED 09/04/2022                            *
+*    UPDATE: Xbox V1.6 SUPPORT ENABLED 20/11/2022                            *
+*                                                                            *
+*    Q: What about IGR & fan speed control, what gives?                      *
+*    A: Like mentioned above some features have been disabled. These will    *
+*    make an appearance in future build releases.                            *
+*    UPDATE: IGR SUPPORT ENABLED 17/02/2022                                  *
+*    UPDATE: Custom Fan SUPPORT Added 22/04/2022                             *
+*                                                                            *
+*    Q: My dashboard cant see my extra partitions 8-14.                      *
+*    A: Some dashboards were programed to only support F & G therefore       *
+*    your extra partitions wont show. We suggest using XBMC which supports   *
+*    6 extra partitions. As new dashboards and apps are developed we are     *
+*    sure that they will include support for extra partitions.               *
+*    UPDATE: Larger Single Partition Support Added 22/04/2022                *
+*                                                                            *
+*    Q: Will this run on XEMU?.                                              *
+*    A: Yes                                                                  *
+*                                                                            *
+*    Q: How do i report my test results?                                     *
+*    A: You can share your findings on the xboxscene forums or in the        *
+*    Cerbios room on the xbox-scene discord. https://discord.gg/VcdSfajQGK   *
+*                                                                            *
+*    Q: Where can i find help the forums are dead?                           *
+*    A: Try the discord the xbox community is helpful.                       *
+*                                                                            *
+*    Q: Where do i put the cerbios.ini?                                      *
+*    A: Root of C:.                                                          *
+*                                                                            *
+******************************************************************************
+                                                                              
